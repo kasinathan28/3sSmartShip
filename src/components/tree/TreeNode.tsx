@@ -88,8 +88,8 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
         />
       )}
 
-      {/* Expand/Collapse Button */}
-      <button 
+      {/* Expand/Collapse Button - Removed as per user request */}
+      {/* <button 
         onClick={(e) => {
           e.stopPropagation();
           onToggle(node.id);
@@ -100,7 +100,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
         )}
       >
         {isExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-      </button>
+      </button> */}
 
       {/* Node Content */}
       <div className="flex items-center gap-2.5 cursor-pointer">

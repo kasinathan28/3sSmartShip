@@ -62,7 +62,7 @@ const NavItemComponent = memo(({ item, isActive, isOpen, onToggle }: NavItemComp
 
       {/* Submenu */}
       {hasChildren && isOpen && (
-        <div className="ml-9 flex flex-col gap-1 mt-1 border-l border-gray-100 pl-2">
+        <div className="ml-9 flex flex-col gap-1 mt-1 pl-2">
           {item.children!.map((child) => (
             <div
               key={child.id}
@@ -88,8 +88,8 @@ export const Sidebar = memo(() => {
 
   return (
     <aside className="w-[288px] h-screen bg-sidebar-bg flex flex-col pt-4 pb-4 px-4 gap-[10px] overflow-hidden sticky top-0 relative">
-      {/* Gradient Sidebar Divider */}
-      <div className="absolute top-0 right-0 h-full w-[2px] bg-gradient-to-b from-[#787677] to-[#8E8E8E] z-10" />
+      {/* Gradient Sidebar Divider - Removed as per user request */}
+      {/* <div className="absolute top-0 right-0 h-full w-[2px] bg-gradient-to-b from-[#787677] to-[#8E8E8E] z-10" /> */}
 
       {/* Logo Section */}
       <div className="flex items-center gap-2 px-2 pb-2">

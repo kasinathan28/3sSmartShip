@@ -5,7 +5,6 @@ import {
     useEdgesState,
     type Edge,
     type Node,
-    MarkerType,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { useEffect, useMemo, useState, useCallback } from 'react';
@@ -76,12 +75,13 @@ const transformDataToFlow = (
                 animated: false,
                 className: '[&_path]:animate-draw-edge',
                 style: { stroke: '#E5E7EB', strokeWidth: REACT_FLOW_CONFIG.EDGE_STROKE_WIDTH },
-                markerEnd: {
-                    type: MarkerType.ArrowClosed,
-                    width: 20,
-                    height: 20,
-                    color: '#E5E7EB',
-                },
+                // Arrow marker removed as per user request
+                // markerEnd: {
+                //     type: MarkerType.ArrowClosed,
+                //     width: 20,
+                //     height: 20,
+                //     color: '#E5E7EB',
+                // },
             });
         }
 

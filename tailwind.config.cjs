@@ -30,6 +30,7 @@ module.exports = {
                 },
                 node: {
                     part: 'var(--node-part)',
+                    'part-light': 'var(--node-part-light)',
                     'part-group': 'var(--node-part-group)',
                     component: 'var(--node-component)',
                     subsystem: 'var(--node-subsystem)',

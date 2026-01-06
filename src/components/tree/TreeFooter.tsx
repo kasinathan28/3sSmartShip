@@ -45,7 +45,7 @@ const Controls = memo(() => {
             <button
                 type="button"
                 onClick={() => zoomIn({ duration: ANIMATION.NORMAL })}
-                className="bg-white p-2 rounded-lg border border-gray-200 shadow-sm text-gray-700 hover:text-black hover:bg-gray-50 transition-colors"
+                className="bg-transparent p-2 rounded-lg border-none text-gray-700 hover:text-black transition-colors"
                 aria-label="Zoom In"
             >
                 <Plus size={18} strokeWidth={2} />
@@ -53,7 +53,7 @@ const Controls = memo(() => {
             <button
                 type="button"
                 onClick={() => zoomOut({ duration: ANIMATION.NORMAL })}
-                className="bg-white p-2 rounded-lg border border-gray-200 shadow-sm text-gray-700 hover:text-black hover:bg-gray-50 transition-colors"
+                className="bg-transparent p-2 rounded-lg border-none text-gray-700 hover:text-black transition-colors"
                 aria-label="Zoom Out"
             >
                 <Minus size={18} strokeWidth={2} />
@@ -61,7 +61,7 @@ const Controls = memo(() => {
             <button
                 type="button"
                 onClick={() => fitView({ duration: ANIMATION.NORMAL })}
-                className="bg-white p-2 rounded-lg border border-gray-200 shadow-sm text-gray-700 hover:text-black hover:bg-gray-50 transition-colors"
+                className="bg-transparent p-2 rounded-lg border-none text-gray-700 hover:text-black transition-colors"
                 aria-label="Fit View"
             >
                 <Scan size={18} strokeWidth={2} />
@@ -84,7 +84,7 @@ const TreeFooterComponent = ({ isOpen, onToggle }: TreeFooterProps) => {
             {/* Expanded Footer Panel */}
             <div
                 className={twMerge(
-                    'bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100',
+                    'bg-transparent rounded-xl border-none',
                     'relative transition-all duration-300 ease-in-out origin-bottom',
                     isOpen
                         ? 'opacity-100 translate-y-0 p-4 pointer-events-auto nopan'
@@ -107,7 +107,7 @@ const TreeFooterComponent = ({ isOpen, onToggle }: TreeFooterProps) => {
                     {/* Top Row: Info + Controls */}
                     <div className="flex items-start justify-between">
                         {/* Breadcrumbs Placeholder */}
-                        <div className="flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100 box-decoration-clone">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 bg-white px-3 py-1.5 rounded-lg shadow-sm border border-gray-100 box-decoration-clone">
                             <span>Equipments</span>
                             <span>/</span>
                             <span>Engine</span>
@@ -123,7 +123,8 @@ const TreeFooterComponent = ({ isOpen, onToggle }: TreeFooterProps) => {
                     </div>
 
                     {/* Bottom Row: Legend */}
-                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 border-t border-gray-50">
+
+                    <div className="inline-flex self-start flex-wrap items-center gap-x-6 gap-y-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-100">
                         <LegendItem color="bg-node-system" label="Equipment Type" />
                         <LegendItem color="bg-node-subsystem" label="Equipment" />
                         <LegendItem color="bg-node-subsystem-code" label="Equipment (Draft)" />

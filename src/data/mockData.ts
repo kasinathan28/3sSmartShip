@@ -35,6 +35,12 @@ export const vesselHierarchy: TreeNodeData[] = [
                           { id: 'seal-1', label: 'Seal', type: 'Part' },
                           { id: 'oring', label: 'O-Ring', type: 'Part' },
                           { id: 'seal-turbine', label: 'Seal - Turbine Side', type: 'Part' },
+                          { id: 'seal-compressor', label: 'Seal - Compressor Side', type: 'Part' },
+                          { id: 'seal-engine-mount', label: 'Seal - Engine Mount', type: 'Part' },
+                          { id: 'seal-exhaust-flange', label: 'Seal - Exhaust Flange', type: 'Part' },
+                          { id: 'seal-oil-pan', label: 'Seal - Oil Pan', type: 'Part' },
+                          { id: 'seal-intake-manifold', label: 'Seal - Intake Manifold', type: 'Part' },
+                          { id: 'seal-transmission-case', label: 'Seal - Transmission Case', type: 'Part' },
                         ]
                       },
                       { id: 'part-aux-blower', label: 'Aux Blower', type: 'ComponentGroup' },
