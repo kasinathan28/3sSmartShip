@@ -1,6 +1,6 @@
 import React from 'react';
 import type { TreeNodeData, NodeType } from '../../types';
-import { ChevronRight, ChevronDown, Circle, Box, Layers, Zap, Anchor } from 'lucide-react';
+import { Circle, Box, Layers, Zap, Anchor } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 
 interface TreeNodeProps {
@@ -56,8 +56,6 @@ const getTypeStyles = (type: NodeType) => {
 export const TreeNode: React.FC<TreeNodeProps> = ({ 
   node, 
   level, 
-  isExpanded, 
-  onToggle,
   isVisible,
   searchMatch
 }) => {
@@ -65,7 +63,6 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
 
   const styles = getTypeStyles(node.type);
   const Icon = styles.icon;
-  const hasChildren = node.children && node.children.length > 0;
 
   return (
     <div 
